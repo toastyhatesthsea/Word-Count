@@ -19,12 +19,21 @@ public class WordCount
 
         for (String word : newString)
         {
-            newWord = word.split("\'", 3);
+            aWord = cleanWord(word);
 
             aString.matches("[a-zA-Z]+")
         }
 
         return count;
+    }
+
+    public String cleanWord(String aWord)
+    {
+        boolean isValid = true;
+        for(int i=0; i<aWord.length()&&isValid; i++)
+        {
+
+        }
     }
 }
 
