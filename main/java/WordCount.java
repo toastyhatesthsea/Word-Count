@@ -30,10 +30,20 @@ public class WordCount
     public String cleanWord(String aWord)
     {
         boolean isValid = true;
+        String answer = "";
         for(int i=0; i<aWord.length()&&isValid; i++)
         {
+            String aCharacter = aWord.substring(i, i + 1);
 
+            if ((i == 0 || i == aWord.length() - 1) && aCharacter.matches("[a-zA-Z]+"))
+            {
+                answer = answer.concat(aCharacter);
+            } else if (aCharacter.matches("[a-zA-Z]+"))
+            {
+                answer = answer.concat(aCharacter);
+            }
         }
+        return answer;
     }
 }
 
